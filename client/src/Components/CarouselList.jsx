@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
@@ -154,7 +155,7 @@ class CarouselList extends React.Component {
   render() {
     const { pageNum, right, maxPageNum } = this.state;
     const { carousels, showModal } = this.props;
-
+    console.log(carousels);
     $('ul').animate({ right }, 900);
 
     return (
@@ -179,7 +180,7 @@ class CarouselList extends React.Component {
           <ul style={{ right }}>
             {
               carousels.map((carousel) => (
-                <Carousel info={carousel} showModal={showModal} />
+                <Carousel key={carousel._id} info={carousel} showModal={showModal} />
               ))
             }
           </ul>
