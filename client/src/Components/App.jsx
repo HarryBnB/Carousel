@@ -66,7 +66,7 @@ class App extends React.Component {
 
   showFavModal() {
     $('body').css('overflow', 'hidden').append(`
-      <div class="cover" style="position: fixed; top: 0; width: 100%; height: 100%; background-color: #00000096;"></div>
+      <div class="cover" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #00000096;"></div>
       <div class="favModal">
         <img class="closeFavModal" src="https://rooms.s3-us-west-1.amazonaws.com/close.png" height="16" width="16" style="cursor: pointer;"/>
         <h3 style="font-size: 24px">Save to a list</h3>
@@ -99,7 +99,7 @@ class App extends React.Component {
           <label for="favName" style="margin-bottom: 10px; display: inline-block">Name:</label><br>
           <input id="favName" type="text" onChange="" style="width: 100%; padding: 10px 3px;
           border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
-          <span style="position: relative; top: 20px; left: 245px;">
+          <span style="position: relative; top: 20px; left: 235px;">
             <span class="cancelButton" style="background-color: #fff; padding: 9px 19px; border: 1px solid #008489; margin-right: 15px; border-radius: 5px; cursor: pointer;">cancel</span>
             <span class="createButton" style="background-color: rgba(0, 132, 137); color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">create</span>
           </span>
