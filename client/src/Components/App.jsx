@@ -30,13 +30,14 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getCarousels();
+    // this.getSpecificCarousel();
   }
 
   // get all the room for carousel
   getCarousels() {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3007/api/rooms/carousels',
+      url: 'http://localhost:3007/carousel/carousels',
       success: (carousels) => {
         this.setState({
           carousels,
@@ -49,10 +50,10 @@ class App extends React.Component {
   }
 
   // get a specific room
-  getSpecificCarousel(roomId) {
+  getSpecificCarousel() {
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3007/api/rooms/${roomId}/carousels`,
+      url: `http://localhost:3007/carousel/${roomId}/carousels`,
       success: (carousels) => {
         this.setState({
           carousels,

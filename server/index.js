@@ -15,11 +15,11 @@ const port = 3007;
 app.use(cors());
 app.use(express.static('client/dist'));
 
-app.get('/api/rooms/carousels', (req, res) => {
+app.get('/carousel/carousels', (req, res) => {
   controller.getCarousels(req, res);
 });
 
-app.get('/api/rooms/:roomId/carousels', (req, res) => {
+app.get('/carousel/:roomId/carousels', (req, res) => {
   controller.getSpecificCarousel(req, res);
 });
 
