@@ -9,7 +9,7 @@ const cors = require('cors');
 const controller = require('./controllers.js');
 
 const app = express();
-const port = 3007;
+const port = process.env.PORT || 3007;
 
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());

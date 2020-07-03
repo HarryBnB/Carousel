@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable import/extensions */
-/* eslint-disable no-console */
 import React from 'react';
 import styled from 'styled-components';
 import Photos from './Photos.jsx';
@@ -73,7 +72,6 @@ const Price = styled.div`
   font-size: 16px;
 `;
 
-// console.log('hello Carousel');
 class Carousel extends React.Component {
   constructor(props) {
     super(props);

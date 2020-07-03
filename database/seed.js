@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 /* eslint-disable spaced-comment */
 /* eslint-disable no-console */
+const process = require('process');
+
 const faker = require('faker');
 
 const db = require('./index.js');
@@ -112,8 +115,9 @@ const carousels = getCarousels(100);
 
 const insertSampleCarousels = () => {
   Carousel.create(carousels)
-    .then(() => db.disconnect())
-    .catch((err) => { console.log(err); });
+    .then(() => console.log('successful!'))
+    .catch((err) => { console.log(err); })
+    .finally(() => process.exit());
 };
 
 insertSampleCarousels();

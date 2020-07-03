@@ -3,7 +3,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/extensions */
-/* eslint-disable no-console */
 import React from 'react';
 import $ from 'jquery';
 import styled from 'styled-components';
@@ -155,7 +154,7 @@ class CarouselList extends React.Component {
   render() {
     const { pageNum, right, maxPageNum } = this.state;
     const { carousels, showModal } = this.props;
-    console.log(carousels);
+
     $('ul').animate({ right }, 900);
 
     return (
