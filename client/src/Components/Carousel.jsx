@@ -114,7 +114,7 @@ class Carousel extends React.Component {
             {' '}
           </span>
           <span className="rating">
-            <img src="https://rooms.s3-us-west-1.amazonaws.com/ratingStar.png" alt="rating" />
+            <img src="https://rooms.s3-us-west-1.amazonaws.com/ratingStar.png" alt="ratings on room" />
             {avgRatings}
             <span>
               {' '}
