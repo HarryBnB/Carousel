@@ -69,7 +69,7 @@ class App extends React.Component {
     $('body').css('overflow', 'hidden').append(`
       <div class="cover" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #00000096;"></div>
       <div class="favModal">
-        <img class="closeFavModal" src="https://rooms.s3-us-west-1.amazonaws.com/close.png" height="16" width="16" style="cursor: pointer;"/>
+        <img class="closeFavModal" src="https://rooms.s3-us-west-1.amazonaws.com/close.png" height="16" width="16" style="cursor: pointer;" alt="close the modal of favorite"/>
         <h3 style="font-size: 24px">Save to a list</h3>
         <span class="createFav" style="display: inline-block; width: 100%; margin: 14px 0; color: #008489; cursor: pointer"> Create to new list </span>
         <span class="favFormBox" style="width: 100%; margin: 14px 0 30px; display: none;"></span>
@@ -132,7 +132,7 @@ class App extends React.Component {
         }
 
         $('.faveCollection').append(`
-          <li style="overflow: hidden; padding: 26px 0; border-top: 1px solid #eee;"><span style="float: left; position: relative; top: 5px;">${favName}</span><img class="favButton" style="float: right; cursor: pointer" src="https://rooms.s3-us-west-1.amazonaws.com/fav.png" height="30" width="30"/></li>
+          <li style="overflow: hidden; padding: 26px 0; border-top: 1px solid #eee;"><span style="float: left; position: relative; top: 5px;">${favName}</span><img class="favButton" style="float: right; cursor: pointer" src="https://rooms.s3-us-west-1.amazonaws.com/fav.png" height="30" width="30"  alt="button for favorite"/></li>
         `);
 
         $('.favButton').on('click', () => {
