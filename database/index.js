@@ -2,7 +2,7 @@
 // getting-started.js
 const mongoose = require('mongoose');
 
-const mongoUri = 'mongodb://172.17.0.2:27017/carousel';
+const mongoUri = 'mongodb://localhost:27017/carousel';
 
 const db = mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected'))
