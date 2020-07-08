@@ -171,9 +171,9 @@ class Photos extends React.Component {
     }
 
     if (isFav) {
-      fav = <img className="favImg" style={{ display: 'inline-block' }} src="https://rooms.s3-us-west-1.amazonaws.com/fav_over.png" alt="favorite checked" onClick={this.favCheck} />;
+      fav = <img className="favImg" style={{ display: 'inline-block' }} src="https://rooms.s3-us-west-1.amazonaws.com/webP/fav_over.webp" alt="favorite checked" onClick={this.favCheck} />;
     } else {
-      fav = <img className="favImg" src="https://rooms.s3-us-west-1.amazonaws.com/fav.png" alt="favorite unchecked" onClick={this.favCheck} />;
+      fav = <img className="favImg" src="https://rooms.s3-us-west-1.amazonaws.com/webP/fav.webp" alt="favorite unchecked" onClick={this.favCheck} />;
     }
 
     return (
