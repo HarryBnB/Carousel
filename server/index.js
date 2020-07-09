@@ -5,15 +5,18 @@
 const express = require('express');
 // const bodyParser = require('body-parser');
 // const Carousels = require('../database/Carousel.js');
+const path = require('path');
 const cors = require('cors');
+const expressStaticGzip = require('express-static-gzip');
 const controller = require('./controllers.js');
 
 const app = express();
 const port = process.env.PORT || 3007;
+const publicPath = path.join(__dirname, '/../client/dist');
 
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
-app.use(express.static('client/dist'));
+app.use('/', expressStaticGzip(publicPath, { enableBrotli: true, orderPreference: ['br'] }));
 
 app.get('/carousel/carousels', (req, res) => {
   controller.getCarousels(req, res);
